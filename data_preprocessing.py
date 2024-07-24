@@ -8,7 +8,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # getting current working directory
-os.getcwd()
+print(os.getcwd()
 
 # delete existing folders
 def delete_folder(path):

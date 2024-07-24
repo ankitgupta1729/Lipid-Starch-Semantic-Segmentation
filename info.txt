@@ -1,0 +1,50 @@
+https://github.com/labelmeai/labelme/tree/main/examples/tutorial#convert-to-dataset
+
+------------------------------------------------------------------------------------------------------------------------------
+
+There are 2 issues:
+
+1. Some images have cells in that very small part touches the boundary so should we have to consider it as partial cell 
+   or not. There are some edge detection algorithm from which we can find out whether it is a partial cell or not because
+   if edge pixel touches the boundary then it is cell otherwise not. Some opencv algorithm removes the border touching object too
+   if we don't remove partial cell then it becomes easy, not complex 
+
+2. if a cell contains starch then starch cell should be having both lables cell lable and starch label.  
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Steps to Connect with GPU:
+
+A. https://lepim.jio.com/PasswordVault/v10/logon/ldap
+B. Login with username and password after getting the access
+C. Search the IP: 10.144.114.210
+D. Connect and rdp will be downloaded and open it
+E. Click on "No" for a dialogue box
+F. Make your own folder with your name
+G. create python virtual environment in that folder
+H. Access the jupyter notebook using the command: jupyter notebook --ip=0.0.0.0 --allow-root
+I. It will show 2 links. copy the 2nd like with 127.0.0.1/.. and paste it in your local browser and change the ip 127.0.0.1 to server ip
+   10.144.114.210 and then you will access it.
+
+(To check the cuda version for gpu: run in terminal: nvidia-smi and also nvcc --version)
+
+* Create a virtual environment as:
+
+A. go to your project directory in terminal
+B. python -m venv myenv
+C. source myenv/bin/activate
+
+* export proxies:
+
+export http_proxy=http://lwproxy.jio.com:8080/
+export https_proxy=https://lwproxy.jio.com:8080/
+
+* install python packages
+
+pip install -r requirements.txt
+
+
+* to upload a directory from local to server. Use upload option of notebook but first convert it into a zip file then upload
+  (https://stackoverflow.com/questions/34734714/ipython-jupyter-uploading-folder)
+
